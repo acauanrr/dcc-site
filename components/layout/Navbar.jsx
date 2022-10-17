@@ -21,6 +21,9 @@ import {
   MenuGroup,
   MenuOptionGroup,
   MenuDivider,
+  Drawer,
+  DrawerOverlay,
+  DrawerContent,
 } from "@chakra-ui/react";
 
 import { useRouter } from "next/router";
@@ -28,12 +31,16 @@ import { useRouter } from "next/router";
 import NextLink from "next/link";
 import { AiOutlineMenu } from "react-icons/ai";
 import Logo from "../_ui/Logo";
+import NavbarMobile from "./NavbarMobile";
+import { FiMenu } from "react-icons/fi";
 
 export default function Navbar() {
   const router = useRouter();
 
   const bg = useColorModeValue("gray.50", "gray.800");
-  const mobileNav = useDisclosure();
+  // const mobileNav = useDisclosure();
+  const navbarMobile = useDisclosure();
+  const integrations = useDisclosure();
 
   return (
     <Box
@@ -46,8 +53,19 @@ export default function Navbar() {
       }}
       py={4}
       shadow="md"
-     
     >
+      {/* <NavbarMobile display={{ base: "none", md: "unset" }} /> */}
+      <Drawer
+        isOpen={navbarMobile.isOpen}
+        onClose={navbarMobile.onClose}
+        placement="left"
+      >
+        <DrawerOverlay />
+        <DrawerContent>
+          <NavbarMobile w="full" borderRight="none" navm={navbarMobile} />
+        </DrawerContent>
+      </Drawer>
+
       <Flex
         alignItems="center"
         justifyContent="space-between"
@@ -90,7 +108,6 @@ export default function Navbar() {
                   Apresentação
                 </MenuItem>
                 <MenuItem>Chefia e Coordenações</MenuItem>
-                <MenuItem>História do DCC</MenuItem>
                 <MenuItem>Missão e Valores</MenuItem>
               </MenuList>
             </Menu>
@@ -131,7 +148,7 @@ export default function Navbar() {
               </MenuButton>
               <MenuList>
                 <MenuItem>Projetos</MenuItem>
-                <MenuItem>Programas</MenuItem>
+                <MenuItem>Programas UFRR</MenuItem>
               </MenuList>
             </Menu>
             <Menu>
@@ -156,7 +173,7 @@ export default function Navbar() {
               md: "none",
             }}
           >
-            <IconButton
+            {/* <IconButton
               display={{
                 base: "flex",
                 md: "none",
@@ -170,9 +187,16 @@ export default function Navbar() {
               variant="ghost"
               icon={<AiOutlineMenu />}
               onClick={mobileNav.onOpen}
+            /> */}
+            <IconButton
+              aria-label="Menu"
+              display={{ base: "inline-flex", md: "none" }}
+              onClick={navbarMobile.onOpen}
+              icon={<FiMenu />}
+              size="sm"
             />
 
-            <VStack
+            {/* <VStack
               pos="absolute"
               top={0}
               left={0}
@@ -263,23 +287,7 @@ export default function Navbar() {
                   <MenuItem>Ex-alunos</MenuItem>
                 </MenuList>
               </Menu>
-
-              {/* <Button w="full" variant="ghost">
-                DCC
-              </Button>
-              <Button w="full" variant="ghost">
-                Ensino
-              </Button>
-              <Button w="full" variant="ghost">
-                Pesquisa
-              </Button>
-              <Button w="full" variant="ghost">
-                Extensão/Projetos
-              </Button>
-              <Button w="full" variant="ghost">
-                Pessoas
-              </Button> */}
-            </VStack>
+            </VStack> */}
           </Box>
         </HStack>
         <Flex>

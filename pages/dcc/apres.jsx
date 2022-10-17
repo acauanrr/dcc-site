@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import {
   Box,
@@ -23,9 +24,15 @@ import { FiMenu } from "react-icons/fi";
 
 export default function ApresentacaoDCC() {
   const sidebar = useDisclosure();
+  const navbarMobile = useDisclosure();
+
+  useEffect(() => {
+    navbarMobile.onClose();
+  });
+
   return (
     <Flex h="full" w="full" justifyContent="center" p={10}>
-      <HStack w={{ base: "100%", sm: "60%" }} >
+      <HStack w={{ base: "100%", sm: "60%" }}>
         <SideBar display={{ base: "none", md: "unset" }} />
         <Drawer
           isOpen={sidebar.isOpen}
@@ -39,14 +46,14 @@ export default function ApresentacaoDCC() {
         </Drawer>
         <Box ml={{ base: 0, md: 60 }} transition=".3s ease">
           <VStack h="full">
-            <IconButton
+            {/* <IconButton
               aria-label="Menu"
               display={{ base: "inline-flex", md: "none" }}
               onClick={sidebar.onOpen}
               icon={<FiMenu />}
               size="sm"
               alignSelf="start"
-            />
+            /> */}
             <Box alignSelf="start">
               <Breadcrumb
                 spacing="8px"
