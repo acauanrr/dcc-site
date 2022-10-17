@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Center,
   Flex,
   Heading,
   HStack,
@@ -298,31 +299,37 @@ export default function Home() {
                     </VStack>
                   </VStack>
                 </CardHeader>
-                <HStack w="full" justifyContent="center" p={5}>
-                  <NextLink
-                    href="https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Fcacc.ufrr&e=ATPYcsDsxSyoE5kK3lGL3H4kwo6jUxLnqYN_3FcMRW9QqIEjj_ILeNU32KVPlkJbS0zJXUVJAxTyAmXHxRvX&s=1"
-                    passHref
-                  >
-                    <Link fontSize="xs" isExternal>
-                      <Image
-                        alt="logo-footer"
-                        src="/images/logos/logo-cacc.png"
-                        boxSize="70%"
-                      />
-                    </Link>
-                  </NextLink>
-                  <NextLink
-                    href="https://www.instagram.com/atleticanexus/"
-                    passHref
-                  >
-                    <Link fontSize="xs" isExternal>
-                      <Image
-                        alt="logo-footer"
-                        src="/images/logos/nexus-logo.png"
-                        boxSize="70%"
-                      />
-                    </Link>
-                  </NextLink>
+                <HStack w="full" spacing={0} p={5}>
+                  <Center w="50%">
+                    <NextLink
+                      href="https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Fcacc.ufrr&e=ATPYcsDsxSyoE5kK3lGL3H4kwo6jUxLnqYN_3FcMRW9QqIEjj_ILeNU32KVPlkJbS0zJXUVJAxTyAmXHxRvX&s=1"
+                      passHref
+                    >
+                      <Link isExternal>
+                        <Flex boxSize="36">
+                          <Image
+                            alt="logo-footer"
+                            src="/images/logos/logo-cacc.png"
+                          />
+                        </Flex>
+                      </Link>
+                    </NextLink>
+                  </Center>
+                  <Center w="50%">
+                    <NextLink
+                      href="https://www.instagram.com/atleticanexus/"
+                      passHref
+                    >
+                      <Link isExternal>
+                        <Flex boxSize="36">
+                          <Image
+                            alt="logo-footer"
+                            src="/images/logos/nexus-logo.png"
+                          />
+                        </Flex>
+                      </Link>
+                    </NextLink>
+                  </Center>
                 </HStack>
               </VStack>
             </Flex>

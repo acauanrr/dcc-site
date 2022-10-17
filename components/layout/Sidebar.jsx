@@ -6,12 +6,14 @@ import {
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
-import { FaBell, FaClipboardCheck, FaRss } from "react-icons/fa";
+import { FaBell, FaClipboardCheck } from "react-icons/fa";
 import { AiFillGift } from "react-icons/ai";
 import { BsGearFill } from "react-icons/bs";
 import { FiMenu, FiSearch } from "react-icons/fi";
-import { HiCode, HiCollection } from "react-icons/hi";
+import { HiCode, HiCollection, HiOutlineOfficeBuilding } from "react-icons/hi";
 import { MdHome, MdKeyboardArrowRight } from "react-icons/md";
+import { CgLoadbarDoc } from "react-icons/cg";
+import { BiGroup, BiHistory, BiOutline } from "react-icons/bi";
 
 export default function SideBar(props) {
   const sidebar = useDisclosure();
@@ -66,13 +68,13 @@ export default function SideBar(props) {
       w="60"
       {...props}
     >
-      <Flex px="4" py="5" align="center">
+      <Flex flexDirection="row" w="full">
         <Text
           fontSize="2xl"
-          ml="2"
           color="brand.600"
-          _dark={{ color: "white" }}
           fontWeight="semibold"
+          textAlign="center"
+          w="full"
         >
           DCC
         </Text>
@@ -84,11 +86,11 @@ export default function SideBar(props) {
         color="gray.600"
         aria-label="Main Navigation"
       >
-        <NavItem icon={MdHome}>Apresentação</NavItem>
-        <NavItem icon={FaRss}>Chefia e Coordenação</NavItem>
-        <NavItem icon={HiCollection}>História</NavItem>
-        <NavItem icon={FaClipboardCheck}>Missão e Valores</NavItem>
-        <NavItem icon={AiFillGift}>Infraestrutura</NavItem>
+        <NavItem icon={CgLoadbarDoc}>Apresentação</NavItem>
+        <NavItem icon={BiGroup}>Chefia e Coordenação</NavItem>
+        <NavItem icon={BiHistory}>História</NavItem>
+        <NavItem icon={BiOutline}>Missão e Valores</NavItem>
+        <NavItem icon={HiOutlineOfficeBuilding}>Infraestrutura</NavItem>
       </Flex>
     </Box>
   );

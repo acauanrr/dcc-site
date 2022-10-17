@@ -43,7 +43,7 @@ export default function ApresentacaoDCC() {
                 fontWeight="bold"
                 fontSize="smaller"
                 textAlign="justify"
-                color="brand.500"
+                color="gray.900"
               >
                 <BreadcrumbItem>
                   <BreadcrumbLink href="/">
