@@ -88,25 +88,6 @@ export default function SideBar(props) {
         <NavItem icon={FaRss}>Chefia e Coordenação</NavItem>
         <NavItem icon={HiCollection}>História</NavItem>
         <NavItem icon={FaClipboardCheck}>Missão e Valores</NavItem>
-        {/* <NavItem icon={HiCode} onClick={integrations.onToggle}>
-          Integrations
-          <Icon
-            as={MdKeyboardArrowRight}
-            ml="auto"
-            transform={integrations.isOpen && "rotate(90deg)"}
-          />
-        </NavItem>
-        <Collapse in={integrations.isOpen}>
-          <NavItem pl="12" py="2">
-            Shopify
-          </NavItem>
-          <NavItem pl="12" py="2">
-            Slack
-          </NavItem>
-          <NavItem pl="12" py="2">
-            Zapier
-          </NavItem>
-        </Collapse> */}
         <NavItem icon={AiFillGift}>Infraestrutura</NavItem>
       </Flex>
     </Box>
