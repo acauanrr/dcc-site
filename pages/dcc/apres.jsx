@@ -35,15 +35,15 @@ export default function ApresentacaoDCC() {
       <HStack w={{ base: "100%", sm: "60%" }}>
         <SideBar display={{ base: "none", md: "unset" }} />
         <Box ml={{ base: 0, md: 60 }} transition=".3s ease" h="full">
-          <VStack >
-            <Box alignSelf="start">
+          <VStack>
+            <Box alignSelf="start" px={{ base: 1, md: 5 }}>
               <Breadcrumb
                 spacing="8px"
                 separator={<ChevronRightIcon color="gray.500" />}
                 fontWeight="bold"
                 fontSize="smaller"
                 textAlign="justify"
-                color="gray.900"
+                color="gray.800"
               >
                 <BreadcrumbItem>
                   <BreadcrumbLink href="/">

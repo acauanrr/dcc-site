@@ -43,7 +43,7 @@ export default function Heroes() {
           _dark={{ color: "gray.300" }}
           lineHeight="shorter"
         >
-          Fique atualizado do que está acontecendo no DCC!
+          Fique por dentro do que está acontecendo no DCC!
         </Heading>
         <chakra.form w="full" mb={0}>
           <VisuallyHidden>Seu Email</VisuallyHidden>

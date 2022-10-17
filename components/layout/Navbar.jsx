@@ -175,12 +175,22 @@ export default function Navbar() {
               display={{ base: "inline-flex", md: "none" }}
               onClick={navbarMobile.onOpen}
               icon={<FiMenu />}
-              size="sm"
+              size="lg"
             />
           </Box>
         </HStack>
         <Flex>
-          <Button bg="brand.600" color="white" size="sm">
+          <Button
+            bg="brand.600"
+            color="white"
+            size="xs"
+            _hover={{ bg: "brand.800" }}
+            _active={{
+              bg: "brand.800",
+              transform: "scale(0.98)",
+              borderColor: "brand.800",
+            }}
+          >
             DCC Admin
           </Button>
         </Flex>

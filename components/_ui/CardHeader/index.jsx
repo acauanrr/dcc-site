@@ -5,14 +5,14 @@ export default function CardHeader({ title, bgHead, bgBody, color, children }) {
     <Box w="full" h="full" p={2}>
       <Heading
         as="h4"
-        size="md"
+        size="sm"
         w="full"
         borderWidth="1px"
         borderRadius="lg"
         boxShadow="md"
         bg={bgHead}
         color={color}
-        p={2}
+        px={2} py={1}
       >
         {title}
       </Heading>

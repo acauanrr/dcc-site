@@ -90,7 +90,7 @@ export default function CarouselNews() {
     <Flex
       w="70%"
       h="50%"
-      pt={5}
+      pt={3}
       alignItems="flex-start"
       justifyContent="center"
       flexDirection="column"
@@ -101,38 +101,15 @@ export default function CarouselNews() {
         overflow="hidden"
         justifyContent="flex-start"
       >
-        <Flex h="300px" w="full" {...carouselStyle}>
+        <Flex h={{ base: "240px", md: "270px" }} w="full" {...carouselStyle}>
           {slides.map((slide, sid) => (
             <Box key={`slide-${sid}`} boxSize="full" shadow="md" flex="none">
-              <Text
-                color="white"
-                fontSize="xs"
-                p="8px 12px"
-                pos="absolute"
-                top="0"
-              >
-                {sid + 1} / {slidesCount}
-              </Text>
               <Image
                 src={slide.img}
                 alt="carousel image"
                 boxSize="full"
                 backgroundSize="contain"
               />
-              {/* <Stack
-                p="4px 12px"
-                pos="absolute"
-                bottom="0px"
-                textAlign="center"
-                w="full"
-                // mb="8"
-                bg="black"
-                opacity="70%"
-                color="white"
-              >
-                <Text fontSize="md">{slide.label}</Text> 
-                <Text fontSize="lg">{slide.description}</Text>
-              </Stack> */}
             </Box>
           ))}
         </Flex>

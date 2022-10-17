@@ -108,8 +108,8 @@ export default function NavbarMobile(props) {
       w="60"
       {...props}
     >
-      <Flex px="4" py="5" align="center">
-        <Logo src="/images/logos/logo-dcc-04.png" w="50%" />
+      <Flex w="full" justifyContent="center" py={5}>
+        <Logo src="/images/logos/logo-dcc-01.png" w="50%" />
       </Flex>
       <Flex
         direction="column"

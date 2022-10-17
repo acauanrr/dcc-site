@@ -85,14 +85,80 @@ export default function Home() {
                     p={0.5}
                     mx="auto"
                   >
-                    <VStack spacing={3}>
+                    <VStack
+                      borderBottom={{ base: "1px", md: "none" }}
+                      borderBottomColor="gray.300"
+                      pb={{ base: 2, md: 0 }}
+                    >
+                      <Box w="70%">
+                        <Image
+                          alt="profs"
+                          src="/images/noticias/professores.png"
+                          mx="auto"
+                        />
+                      </Box>
+                      <Heading as="h2" size="sm">
+                        Dia dos Professores
+                      </Heading>
+                      <Text fontSize="xs">
+                        Hoje é Dia do Professor e a SBC parabeniza os membros da
+                        nossa comunidade que exercem com tanta dedicação esse
+                        que é um dos mais nobres fazeres profissionais,{" "}
+                      </Text>
+                      <Flex w="full" justifyContent="start">
+                        <NextLink href="#" passHref>
+                          <Link
+                            fontSize="xs"
+                            color="brand.500"
+                            fontWeight="bold"
+                            textAlign="left"
+                          >
+                            Ler mais...
+                          </Link>
+                        </NextLink>
+                      </Flex>
+                    </VStack>
+                    <VStack
+                      borderBottom={{ base: "1px", md: "none" }}
+                      borderBottomColor="gray.300"
+                      pb={{ base: 2, md: 0 }}
+                    >
+                      <Box w="70%">
+                        <Image
+                          alt="logo-footer"
+                          src="/images/noticias/noticia1.png"
+                          mx="auto"
+                        />
+                      </Box>
+                      <Heading as="h2" size="sm">
+                        Colação de Grau - Formandos 2021.2
+                      </Heading>
+                      <Text fontSize="xs">
+                        Ocorreu nesta última terça-feira dia 18, a colação de
+                        grau dos alunos do Curso de Ciência da Computação. Foram
+                        8 alunos,{" "}
+                      </Text>
+                      <Flex w="full" justifyContent="start">
+                        <NextLink href="#" passHref>
+                          <Link
+                            fontSize="xs"
+                            color="brand.500"
+                            fontWeight="bold"
+                            textAlign="left"
+                          >
+                            Ler mais...
+                          </Link>
+                        </NextLink>
+                      </Flex>
+                    </VStack>
+                    <VStack fontSize="xs" fontWeight="semibold" spacing={3}>
                       <NextLink
                         href="https://teletime.com.br/21/09/2022/starlink-supera-concorrentes-de-internet-via-satelite-no-brasil-aponta-ookla/"
                         passHref
                       >
-                        <Link fontSize="xs" isExternal>
+                        <Link isExternal>
                           <HStack>
-                            <FiExternalLink fontSize="220%" />
+                            <FiExternalLink size="25px" />
                             <Text>
                               Starlink supera concorrentes de Internet via
                               satélite no Brasil, aponta Ookla
@@ -104,9 +170,9 @@ export default function Home() {
                         href="https://www.bbc.com/portuguese/geral-60156277"
                         passHref
                       >
-                        <Link fontSize="xs" isExternal>
+                        <Link isExternal>
                           <HStack>
-                            <FiExternalLink fontSize="220%" />
+                            <FiExternalLink size="25px" />
                             <Text>
                               O que é apocalipse quântico e existe razão para
                               preocupação?
@@ -118,9 +184,9 @@ export default function Home() {
                         href="https://canaltech.com.br/ciencia/agencia-de-inteligencia-dos-eua-quer-recriar-mamutes-extintos-227359/"
                         passHref
                       >
-                        <Link fontSize="xs" isExternal>
+                        <Link isExternal>
                           <HStack>
-                            <FiExternalLink fontSize="220%" />
+                            <FiExternalLink size="25px" />
                             <Text>
                               Agência de Inteligência dos EUA quer recriar
                               mamutes extintos
@@ -132,9 +198,9 @@ export default function Home() {
                         href="https://canaltech.com.br/software/por-que-a-geracao-z-pode-nao-gostar-da-linguagem-de-programacao-python-225719/"
                         passHref
                       >
-                        <Link fontSize="xs" isExternal>
+                        <Link isExternal>
                           <HStack>
-                            <FiExternalLink fontSize="220%" />
+                            <FiExternalLink size="25px" />
                             <Text>
                               Por que a Geração Z pode não gostar da linguagem
                               de programação Python?
@@ -142,48 +208,18 @@ export default function Home() {
                           </HStack>
                         </Link>
                       </NextLink>
-                      <Box>
+                      <Flex w="full" justifyContent="start">
                         <NextLink href="#" passHref>
-                          <Link fontSize="xs" color="brand.700">
+                          <Link
+                            fontSize="xs"
+                            color="brand.500"
+                            fontWeight="bold"
+                            textAlign="left"
+                          >
                             Todas as Notícias...
                           </Link>
                         </NextLink>
-                      </Box>
-                    </VStack>
-                    <VStack>
-                      <Box w="70%">
-                        <Image
-                          alt="logo-footer"
-                          src="/images/noticias/professores.png"
-                          mx="auto"
-                        />
-                      </Box>
-                      <Heading as="h2" size="sm">
-                        Dia dos Professores
-                      </Heading>
-                      <Text fontSize="xs" px={2}>
-                        Hoje é Dia do Professor e a SBC parabeniza os membros da
-                        nossa comunidade que exercem com tanta dedicação esse
-                        que é um dos mais nobres fazeres profissionais.{" "}
-                        <Link color="brand.600">Ler mais</Link>
-                      </Text>
-                    </VStack>
-                    <VStack>
-                      <Box w="70%">
-                        <Image
-                          alt="logo-footer"
-                          src="/images/noticias/noticia1.png"
-                          mx="auto"
-                        />
-                      </Box>
-                      <Heading as="h2" size="sm">
-                        Colação de Grau - Formandos 2021.2
-                      </Heading>
-                      <Text fontSize="xs" px={2}>
-                        Ocorreu nesta última terça-feira dia 18, a colação de
-                        grau dos alunos do Curso de Ciência da Computação. Foram
-                        8 alunos, ... <Link color="brand.600">Ler mais</Link>
-                      </Text>
+                      </Flex>
                     </VStack>
                   </SimpleGrid>
                 </CardHeader>
@@ -193,8 +229,8 @@ export default function Home() {
             <Flex w={{ base: "100%", sm: "40%" }}>
               <VStack w={{ base: "100%", sm: "90%" }} alignItems="flex-start">
                 <CardHeader
-                  bgHead="gray.200"
-                  color="red.600"
+                  bgHead="red.700"
+                  color="white"
                   title="Acesso Rápido"
                 >
                   <SimpleGrid
@@ -281,7 +317,7 @@ export default function Home() {
                     </Box>
                   </SimpleGrid>
                 </CardHeader>
-                <CardHeader bgHead="gray.200" color="green.700" title="Eventos">
+                <CardHeader bgHead="green.600" color="white" title="Eventos">
                   {" "}
                   <VStack w="full">
                     <VStack w="70%">
@@ -305,13 +341,25 @@ export default function Home() {
                       href="https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Fcacc.ufrr&e=ATPYcsDsxSyoE5kK3lGL3H4kwo6jUxLnqYN_3FcMRW9QqIEjj_ILeNU32KVPlkJbS0zJXUVJAxTyAmXHxRvX&s=1"
                       passHref
                     >
-                      <Link isExternal>
+                      <Link
+                        style={{ textDecoration: "none" }}
+                        _hover={{ opacity: "85%" }}
+                        isExternal
+                      >
                         <Flex boxSize="36">
                           <Image
                             alt="logo-footer"
                             src="/images/logos/logo-cacc.png"
                           />
                         </Flex>
+                        <Text
+                          textAlign="center"
+                          fontSize="xs"
+                          fontWeight="bold"
+                          pt={0.5}
+                        >
+                          CENTRO ACADÊMICO
+                        </Text>
                       </Link>
                     </NextLink>
                   </Center>
@@ -320,13 +368,25 @@ export default function Home() {
                       href="https://www.instagram.com/atleticanexus/"
                       passHref
                     >
-                      <Link isExternal>
+                      <Link
+                        style={{ textDecoration: "none" }}
+                        _hover={{ opacity: "90%" }}
+                        isExternal
+                      >
                         <Flex boxSize="36">
                           <Image
                             alt="logo-footer"
                             src="/images/logos/nexus-logo.png"
                           />
                         </Flex>
+                        <Text
+                          textAlign="center"
+                          fontSize="xs"
+                          fontWeight="bold"
+                          pt={0.5}
+                        >
+                          ATLÉTICA
+                        </Text>
                       </Link>
                     </NextLink>
                   </Center>
