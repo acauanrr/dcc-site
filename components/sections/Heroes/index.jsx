@@ -22,7 +22,6 @@ export default function Heroes() {
         justifyContent="start"
         px={{ base: 4, md: 20 }}
         py={{ base: 0, md: 0 }}
-   
       >
         <Badge
           color="white"
@@ -50,7 +49,7 @@ export default function Heroes() {
           <VisuallyHidden>Seu Email</VisuallyHidden>
           <Box display={{ base: "block", lg: "none" }}>
             <Input
-              size={{base: "md", md:"lg"}}
+              size={{ base: "md", md: "lg" }}
               color="brand.900"
               type="email"
               placeholder="Entre com seu e-mail..."
@@ -62,15 +61,19 @@ export default function Heroes() {
               color="white"
               variant="solid"
               colorScheme="brand"
-              size={{base: "md", md:"lg"}}
+              size={{ base: "md", md: "lg" }}
               type="submit"
             >
               Inscrever-se
             </Button>
           </Box>
-          <InputGroup size={{base: "sm", md:"lg"}} w="full" display={{ base: "none", lg: "flex" }}>
+          <InputGroup
+            size={{ base: "sm", md: "lg" }}
+            w="full"
+            display={{ base: "none", lg: "flex" }}
+          >
             <Input
-              size={{base: "sm", md:"lg"}}
+              size={{ base: "sm", md: "lg" }}
               color="brand.900"
               type="email"
               placeholder="Entre com seu e-mail..."
@@ -81,7 +84,7 @@ export default function Heroes() {
                 color="white"
                 variant="solid"
                 colorScheme="brand"
-                size={{base: "sm", md:"lg"}}
+                size={{ base: "sm", md: "lg" }}
                 type="submit"
                 roundedLeft={0}
               >
@@ -91,7 +94,12 @@ export default function Heroes() {
           </InputGroup>
         </chakra.form>
       </Flex>
-      <Flex justifyContent="flex-start" alignItems="center" h="100%">
+      <Flex
+        justifyContent="flex-start"
+        alignItems="center"
+        h="100%"
+        display={{ base: "none", md: "flex" }}
+      >
         <Box h="100%">
           <Image
             src="/images/meninos-front.jpg"
@@ -99,7 +107,6 @@ export default function Heroes() {
             boxSize="100%"
             objectFit="contain"
             boxShadow="dark-lg"
-            display={{base: "none", md:"flex"}}
           />
         </Box>
       </Flex>

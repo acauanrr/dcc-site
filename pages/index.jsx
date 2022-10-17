@@ -62,7 +62,7 @@ const eventos = [
 
 export default function Home() {
   return (
-    <VStack h="full" w="full">
+    <VStack h="full" w="full" mb={0}>
       <Flex h="full" w="full" justifyContent="center">
         <Flex w={{ base: "100%", sm: "70%" }}>
           <HStack
@@ -335,8 +335,6 @@ export default function Home() {
         bgImage="url('/images/banner-blue.png')"
         bgPosition="center 30px"
         bgRepeat="no-repeat"
-        
-        
       >
         <Flex w={{ base: "100%", sm: "70%" }} h="2xs" mt={5} zIndex={100}>
           <Heroes />

@@ -38,7 +38,6 @@ export default function Navbar() {
   const router = useRouter();
 
   const bg = useColorModeValue("gray.50", "gray.800");
-  // const mobileNav = useDisclosure();
   const navbarMobile = useDisclosure();
   const integrations = useDisclosure();
 
@@ -54,7 +53,6 @@ export default function Navbar() {
       py={4}
       shadow="md"
     >
-      {/* <NavbarMobile display={{ base: "none", md: "unset" }} /> */}
       <Drawer
         isOpen={navbarMobile.isOpen}
         onClose={navbarMobile.onClose}
@@ -103,7 +101,7 @@ export default function Navbar() {
               >
                 DCC
               </MenuButton>
-              <MenuList>
+              <MenuList fontSize="smaller">
                 <MenuItem onClick={() => router.push("/dcc/apres")}>
                   Apresentação
                 </MenuItem>
@@ -119,7 +117,7 @@ export default function Navbar() {
               >
                 Ensino
               </MenuButton>
-              <MenuList>
+              <MenuList fontSize="smaller">
                 <MenuItem>Bacharelado em Ciência da Computação</MenuItem>
                 <MenuItem>Licenciatura em Informática</MenuItem>
               </MenuList>
@@ -132,7 +130,7 @@ export default function Navbar() {
               >
                 Pesquisa
               </MenuButton>
-              <MenuList>
+              <MenuList fontSize="smaller">
                 <MenuItem>Mestrato Profissional em Computação</MenuItem>
                 <MenuItem>TCCs e Artigos</MenuItem>
                 <MenuItem>Iniciação Científica</MenuItem>
@@ -146,7 +144,7 @@ export default function Navbar() {
               >
                 Extensão
               </MenuButton>
-              <MenuList>
+              <MenuList fontSize="smaller">
                 <MenuItem>Projetos</MenuItem>
                 <MenuItem>Programas UFRR</MenuItem>
               </MenuList>
@@ -159,35 +157,19 @@ export default function Navbar() {
               >
                 Pessoas
               </MenuButton>
-              <MenuList>
+              <MenuList fontSize="smaller">
                 <MenuItem>Professores</MenuItem>
                 <MenuItem>Alunos</MenuItem>
                 <MenuItem>Ex-alunos</MenuItem>
               </MenuList>
             </Menu>
           </HStack>
-
           <Box
             display={{
               base: "inline-flex",
               md: "none",
             }}
           >
-            {/* <IconButton
-              display={{
-                base: "flex",
-                md: "none",
-              }}
-              aria-label="Open menu"
-              fontSize="20px"
-              color="gray.800"
-              _dark={{
-                color: "inherit",
-              }}
-              variant="ghost"
-              icon={<AiOutlineMenu />}
-              onClick={mobileNav.onOpen}
-            /> */}
             <IconButton
               aria-label="Menu"
               display={{ base: "inline-flex", md: "none" }}
@@ -195,99 +177,6 @@ export default function Navbar() {
               icon={<FiMenu />}
               size="sm"
             />
-
-            {/* <VStack
-              pos="absolute"
-              top={0}
-              left={0}
-              right={0}
-              display={mobileNav.isOpen ? "flex" : "none"}
-              flexDirection="column"
-              p={2}
-              pb={4}
-              m={2}
-              bg={bg}
-              spacing={3}
-              rounded="sm"
-              shadow="sm"
-              zIndex={100}
-            >
-              <CloseButton
-                aria-label="Close menu"
-                onClick={mobileNav.onClose}
-              />
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  variant="ghost"
-                  rightIcon={<ChevronDownIcon />}
-                >
-                  DCC
-                </MenuButton>
-                <MenuList>
-                  <MenuItem onClick={() => router.push("/dcc/apres")}>
-                    Apresentação
-                  </MenuItem>
-                  <MenuItem>Chefia e Coordenações</MenuItem>
-                  <MenuItem>História do DCC</MenuItem>
-                  <MenuItem>Missão e Valores</MenuItem>
-                </MenuList>
-              </Menu>
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  variant="ghost"
-                  rightIcon={<ChevronDownIcon />}
-                >
-                  Ensino
-                </MenuButton>
-                <MenuList>
-                  <MenuItem>Bacharelado em Ciência da Computação</MenuItem>
-                  <MenuItem>Licenciatura em Informática</MenuItem>
-                </MenuList>
-              </Menu>
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  variant="ghost"
-                  rightIcon={<ChevronDownIcon />}
-                >
-                  Pesquisa
-                </MenuButton>
-                <MenuList>
-                  <MenuItem>Mestrato Profissional em Computação</MenuItem>
-                  <MenuItem>TCCs e Artigos</MenuItem>
-                  <MenuItem>Iniciação Científica</MenuItem>
-                </MenuList>
-              </Menu>
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  variant="ghost"
-                  rightIcon={<ChevronDownIcon />}
-                >
-                  Extensão
-                </MenuButton>
-                <MenuList>
-                  <MenuItem>Projetos</MenuItem>
-                  <MenuItem>Programas</MenuItem>
-                </MenuList>
-              </Menu>
-              <Menu>
-                <MenuButton
-                  as={Button}
-                  variant="ghost"
-                  rightIcon={<ChevronDownIcon />}
-                >
-                  Pessoas
-                </MenuButton>
-                <MenuList>
-                  <MenuItem>Professores</MenuItem>
-                  <MenuItem>Alunos</MenuItem>
-                  <MenuItem>Ex-alunos</MenuItem>
-                </MenuList>
-              </Menu>
-            </VStack> */}
           </Box>
         </HStack>
         <Flex>

@@ -16,9 +16,16 @@ import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FiTwitter } from "react-icons/fi";
 import Logo from "../_ui/Logo";
 
+import NextLink from "next/link";
+
 export default function Footer() {
   return (
-    <Box bg="gray.100" _dark={{ bg: "gray.600" }} w="full" mt={0}>
+    <Box
+      bg="gray.100"
+      _dark={{ bg: "gray.600" }}
+      w="full"
+      pt={{ base: 0, sm: 4 }}
+    >
       <Stack
         direction={{ base: "column", lg: "row" }}
         w={{ base: "100%", sm: "50%" }}
@@ -94,40 +101,41 @@ export default function Footer() {
       />
       <VStack py={4}>
         <HStack justify="center">
-          <Link>
-            <Icon
-              color="gray.800"
-              _dark={{ color: "white" }}
-              h="20px"
-              w="20px"
-              as={FaFacebookF}
-            />
-          </Link>
-          <Link>
-            <Icon
-              color="gray.800"
-              _dark={{ color: "white" }}
-              h="20px"
-              w="20px"
-              as={FiTwitter}
-            />
-          </Link>
-          <Link>
-            <Icon
-              _dark={{ color: "white" }}
-              h="20px"
-              w="20px"
-              as={GrInstagram}
-            />
-          </Link>
-          <Link>
-            <Icon
-              _dark={{ color: "white" }}
-              h="20px"
-              w="20px"
-              as={FaLinkedinIn}
-            />
-          </Link>
+          <NextLink href="https://www.facebook.com/dccufrr" passHref>
+            <Link isExternal>
+              <Icon
+                color="gray.800"
+                _dark={{ color: "white" }}
+                h="20px"
+                w="20px"
+                as={FaFacebookF}
+              />
+            </Link>
+          </NextLink>
+
+          <NextLink href="https://www.instagram.com/dcc.ufrr/" passHref>
+            <Link isExternal>
+              <Icon
+                _dark={{ color: "white" }}
+                h="20px"
+                w="20px"
+                as={GrInstagram}
+              />
+            </Link>
+          </NextLink>
+          <NextLink
+            href="https://www.linkedin.com/company/ciencia-da-computacao-ufrr/"
+            passHref
+          >
+            <Link isExternal>
+              <Icon
+                _dark={{ color: "white" }}
+                h="20px"
+                w="20px"
+                as={FaLinkedinIn}
+              />
+            </Link>
+          </NextLink>
         </HStack>
 
         <Text textAlign="center" fontSize="smaller" _dark={{ color: "white" }}>
