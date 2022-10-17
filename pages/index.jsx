@@ -78,7 +78,10 @@ export default function Home() {
           content="DCC-Departamento de Ciência da Computação"
         />
         <meta property="url" content="https://dcc-site-one.vercel.app/" />
-        <meta property="image" content="https://dcc-site-one.vercel.app/images/logos/logo-dcc-01.png" />
+        <meta
+          property="image"
+          content="https://dcc-site-one.vercel.app/images/logos/logo-dcc-01.png"
+        />
         <meta name="author" content="Acauan C. Ribeiro" />
         <meta name="creator" content="Acauan C. Ribeiro" />
 
@@ -375,7 +378,7 @@ export default function Home() {
                 <HStack w="full" spacing={0} p={5}>
                   <Center w="50%">
                     <NextLink
-                      href="https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Fcacc.ufrr&e=ATPYcsDsxSyoE5kK3lGL3H4kwo6jUxLnqYN_3FcMRW9QqIEjj_ILeNU32KVPlkJbS0zJXUVJAxTyAmXHxRvX&s=1"
+                      href="https://www.instagram.com/cacc.ufrr/"
                       passHref
                     >
                       <Link
