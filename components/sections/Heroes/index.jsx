@@ -21,7 +21,8 @@ export default function Heroes() {
         alignItems="start"
         justifyContent="start"
         px={{ base: 4, md: 20 }}
-        py={0}
+        py={{ base: 0, md: 0 }}
+   
       >
         <Badge
           color="white"
@@ -49,7 +50,7 @@ export default function Heroes() {
           <VisuallyHidden>Seu Email</VisuallyHidden>
           <Box display={{ base: "block", lg: "none" }}>
             <Input
-              size="lg"
+              size={{base: "md", md:"lg"}}
               color="brand.900"
               type="email"
               placeholder="Entre com seu e-mail..."
@@ -61,15 +62,15 @@ export default function Heroes() {
               color="white"
               variant="solid"
               colorScheme="brand"
-              size="lg"
+              size={{base: "md", md:"lg"}}
               type="submit"
             >
               Inscrever-se
             </Button>
           </Box>
-          <InputGroup size="lg" w="full" display={{ base: "none", lg: "flex" }}>
+          <InputGroup size={{base: "sm", md:"lg"}} w="full" display={{ base: "none", lg: "flex" }}>
             <Input
-              size="lg"
+              size={{base: "sm", md:"lg"}}
               color="brand.900"
               type="email"
               placeholder="Entre com seu e-mail..."
@@ -80,7 +81,7 @@ export default function Heroes() {
                 color="white"
                 variant="solid"
                 colorScheme="brand"
-                size="lg"
+                size={{base: "sm", md:"lg"}}
                 type="submit"
                 roundedLeft={0}
               >
@@ -98,6 +99,7 @@ export default function Heroes() {
             boxSize="100%"
             objectFit="contain"
             boxShadow="dark-lg"
+            display={{base: "none", md:"flex"}}
           />
         </Box>
       </Flex>

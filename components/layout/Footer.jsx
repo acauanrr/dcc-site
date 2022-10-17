@@ -18,7 +18,7 @@ import Logo from "../_ui/Logo";
 
 export default function Footer() {
   return (
-    <Box bg="gray.100" _dark={{ bg: "gray.600" }} w="full">
+    <Box bg="gray.100" _dark={{ bg: "gray.600" }} w="full" mt={0}>
       <Stack
         direction={{ base: "column", lg: "row" }}
         w={{ base: "100%", sm: "50%" }}
@@ -26,11 +26,14 @@ export default function Footer() {
         justify="space-between"
         p={10}
       >
-        <Flex justify="center" gap={3}>
+        <Flex
+          justify={{ base: "space-evenly", md: "center" }}
+          gap={{ base: 0, md: 3 }}
+        >
           <Image
             alt="logo-footer"
             src="/images/logos/logo-dcc-03.png"
-            boxSize="16"
+            boxSize={{ base: "14", md: "16" }}
           />
           <Image
             alt="logo-ufrr"
@@ -42,21 +45,21 @@ export default function Footer() {
           alignItems="start"
           flex={1}
           justify="space-around"
-          fontSize={{ base: "12px", md: "14px" }}
+          fontSize={{ base: "10px", md: "12px" }}
           color="gray.800"
           _dark={{ color: "white" }}
-          textAlign={{ base: "center", md: "left" }}
+          textAlign={{ base: "left", md: "left" }}
         >
           <Flex justify="start" direction="column">
-            <Heading as="h2" size="sm">
-              Insctitucional
+            <Heading as="h2" size="xs">
+              Institucional
             </Heading>
             <Link textTransform="uppercase">Site UFRR</Link>
             <Link textTransform="uppercase">Site CCT</Link>
             <Link textTransform="uppercase">Site NEAD</Link>
           </Flex>
           <Flex justify="start" direction="column">
-            <Heading as="h2" size="sm">
+            <Heading as="h2" size="xs">
               Documentos
             </Heading>
             <Link textTransform="uppercase">Calendário UFRR</Link>
@@ -64,18 +67,24 @@ export default function Footer() {
             <Link textTransform="uppercase">Regimento DCC</Link>
           </Flex>
           <Flex justify="start" direction="column">
-            <Heading as="h2" size="sm">
+            <Heading as="h2" size="xs">
               Contato
             </Heading>
             <Link textTransform="uppercase">Email</Link>
             <Link textTransform="uppercase">Whatsapp</Link>
-            <Heading as="h2" size="sm" mt={2}>
-              Endereço
-            </Heading>
-            <Text>Av. Tals</Text>
           </Flex>
         </HStack>
       </Stack>
+      <Box fontSize="2xs" lineHeight={1} w="full" pt={0}>
+        <VStack mx="auto">
+          <Heading as="h2" size="xs">
+            Endereço
+          </Heading>
+          <Text>UFRR, Campus Paricarana, CCT</Text>
+          <Text>Av. Capitão Ene Garcez, 2413 - Bairro Aeroporto. </Text>
+          <Text>Boa Vista - Roraima RR. 69304-000</Text>
+        </VStack>
+      </Box>
       <Divider
         w="95%"
         mx="auto"
@@ -83,7 +92,7 @@ export default function Footer() {
         _dark={{ color: "#F9FAFB" }}
         h="2px"
       />
-      <VStack py={3}>
+      <VStack py={4}>
         <HStack justify="center">
           <Link>
             <Icon

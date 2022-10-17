@@ -335,8 +335,10 @@ export default function Home() {
         bgImage="url('/images/banner-blue.png')"
         bgPosition="center 30px"
         bgRepeat="no-repeat"
+        
+        
       >
-        <Flex w={{ base: "100%", sm: "70%" }} h="2xs" mt={5}>
+        <Flex w={{ base: "100%", sm: "70%" }} h="2xs" mt={5} zIndex={100}>
           <Heroes />
         </Flex>
       </Flex>
