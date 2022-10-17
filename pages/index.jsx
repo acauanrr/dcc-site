@@ -1,3 +1,4 @@
+import Head from "next/head";
 import {
   Box,
   Button,
@@ -64,6 +65,42 @@ const eventos = [
 export default function Home() {
   return (
     <VStack h="full" w="full" mb={0}>
+      <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta property="locale" content="pt_BR" />
+        <title>DCC - Departamento de Ciência da Computação - UFRR</title>
+        <meta
+          name="description"
+          content="Departamento de Ciência da Computação - DCC, vinculado a Universidade Federal de Roraima - UFRR."
+        />
+        <meta
+          property="site_name"
+          content="DCC-Departamento de Ciência da Computação"
+        />
+        <meta property="url" content="https://dcc-site-one.vercel.app/" />
+        <meta property="image" content="https://dcc-site-one.vercel.app/images/logos/logo-dcc-01.png" />
+        <meta name="author" content="Acauan C. Ribeiro" />
+        <meta name="creator" content="Acauan C. Ribeiro" />
+
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+      </Head>
       <Flex h="full" w="full" justifyContent="center">
         <Flex w={{ base: "100%", sm: "70%" }}>
           <HStack
