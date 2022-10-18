@@ -12,7 +12,8 @@ export default function CardHeader({ title, bgHead, bgBody, color, children }) {
         boxShadow="md"
         bg={bgHead}
         color={color}
-        px={2} py={1}
+        px={2}
+        py={1}
       >
         {title}
       </Heading>

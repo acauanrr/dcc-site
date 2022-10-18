@@ -1,6 +1,19 @@
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, textDecoration } from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
 
 const theme = extendTheme({
+  styles: {
+    global: {
+      "html, body": {
+        color: "gray.600",
+        lineHeight: "tall",
+        background: "url('/images/bg-block-gray.png')  #fff"
+      },
+      a: {
+        color: "teal.500",
+      },
+    },
+  },
   fonts: {
     body: `'Noto Sans', sans-serif`,
     heading: `'Roboto Condensed', sans-serif`,

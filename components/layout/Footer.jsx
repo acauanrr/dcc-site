@@ -41,13 +41,11 @@ export default function Footer() {
             alt="logo-footer"
             src="/images/logos/logo-dcc-03.png"
             boxSize={{ base: "14", md: "16" }}
-            shadow="md"
           />
           <Image
             alt="logo-ufrr"
             src="/images/logos/logo_ufrr.png"
             boxSize="16"
-            shadow="md"
           />
         </Flex>
         <HStack

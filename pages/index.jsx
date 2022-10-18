@@ -118,6 +118,7 @@ export default function Home() {
                   bgHead="brand.700"
                   color="white"
                   title="Últimas Notícias"
+                  bgBody="white"
                 >
                   <SimpleGrid
                     columns={{ base: 1, md: 3 }}
@@ -272,6 +273,7 @@ export default function Home() {
                   bgHead="red.700"
                   color="white"
                   title="Acesso Rápido"
+                  bgBody="white"
                 >
                   <SimpleGrid
                     columns={{ base: 1, md: 3 }}
@@ -296,11 +298,7 @@ export default function Home() {
                         <Box right={0}>
                           <VscFilePdf fontSize="180%" />
                         </Box>
-                        <Text
-                          textAlign="start"
-                          fontSize="2xs"
-                          fontWeight="bold"
-                        >
+                        <Text textAlign="start" fontSize="xs" fontWeight="bold">
                           Disciplinas - Semestre 2022
                         </Text>
                       </HStack>
@@ -321,12 +319,8 @@ export default function Home() {
                         <Box right={0}>
                           <VscFilePdf fontSize="180%" />
                         </Box>
-                        <Text
-                          textAlign="start"
-                          fontSize="2xs"
-                          fontWeight="bold"
-                        >
-                          PPC - Projeto Político do Curso
+                        <Text textAlign="start" fontSize="xs" fontWeight="bold">
+                          PPC do Curso
                         </Text>
                       </HStack>
                     </Box>
@@ -346,18 +340,19 @@ export default function Home() {
                         <Box right={0}>
                           <VscFilePdf fontSize="180%" />
                         </Box>
-                        <Text
-                          textAlign="start"
-                          fontSize="2xs"
-                          fontWeight="bold"
-                        >
+                        <Text textAlign="start" fontSize="xs" fontWeight="bold">
                           Manual do Aluno
                         </Text>
                       </HStack>
                     </Box>
                   </SimpleGrid>
                 </CardHeader>
-                <CardHeader bgHead="green.600" color="white" title="Eventos">
+                <CardHeader
+                  bgHead="green.600"
+                  bgBody="white"
+                  color="white"
+                  title="Eventos"
+                >
                   {" "}
                   <VStack w="full">
                     <VStack w="70%">
