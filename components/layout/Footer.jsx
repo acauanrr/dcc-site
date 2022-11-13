@@ -99,12 +99,12 @@ export default function Footer() {
         _dark={{ color: "#F9FAFB" }}
         h="2px"
       />
-      <VStack py={4}>
+      <VStack py={4} bg="gray.800" color="white" mt={2}>
         <HStack justify="center">
           <NextLink href="https://www.facebook.com/dccufrr" passHref>
             <Link isExternal>
               <Icon
-                color="gray.800"
+                // color="gray.800"
                 _dark={{ color: "white" }}
                 h="20px"
                 w="20px"
