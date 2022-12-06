@@ -1,7 +1,6 @@
 import Head from "next/head";
 import {
   Box,
-  Button,
   Center,
   Flex,
   Heading,
@@ -9,11 +8,9 @@ import {
   Image,
   Link,
   SimpleGrid,
-  Stack,
   Text,
   VStack,
 } from "@chakra-ui/react";
-import CallToAction from "../components/sections/CallToAction";
 import CardHeader from "../components/_ui/CardHeader";
 import CarouselNews from "../components/_ui/CarouselNews";
 import Heroes from "../components/sections/Heroes";
@@ -22,11 +19,12 @@ import NextLink from "next/link";
 
 import { VscFilePdf } from "react-icons/vsc";
 import { FiExternalLink } from "react-icons/fi";
+import Layout from "../components/layout";
 
 const eventos = [
   {
     id: 1,
-    titulo: "JCC - Jornada Ciêntífica da Computação",
+    titulo: "JCC - Jornada Científica da Computação",
     assunto: "",
     tipo: "Palestras e Cursos",
     dia: "10",
@@ -64,7 +62,7 @@ const eventos = [
 
 export default function Home() {
   return (
-    <VStack h="full" w="full" mb={0}>
+    <VStack h="full" w="full">
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="locale" content="pt_BR" />
@@ -108,11 +106,12 @@ export default function Home() {
         <Flex w={{ base: "100%", sm: "70%" }}>
           <HStack
             w="full"
-            spacing={0}
+            spacing={5}
             flexDirection={{ base: "column", sm: "row" }}
+            alignItems="flex-start"
           >
-            <Flex w={{ base: "100%", sm: "60%" }} justifyContent="center">
-              <VStack w={{ base: "100%", sm: "95%" }}>
+            <Flex w={{ base: "100%", sm: "60%" }}>
+              <VStack w="full" pt={4}>
                 <CarouselNews />
                 <CardHeader
                   bgHead="brand.700"
@@ -268,7 +267,12 @@ export default function Home() {
             </Flex>
 
             <Flex w={{ base: "100%", sm: "40%" }}>
-              <VStack w={{ base: "100%", sm: "90%" }} alignItems="flex-start">
+              <VStack
+                w={{ base: "100%", sm: "90%" }}
+                alignItems="flex-start"
+                pt={4}
+                spacing={4}
+              >
                 <CardHeader
                   bgHead="red.700"
                   color="white"

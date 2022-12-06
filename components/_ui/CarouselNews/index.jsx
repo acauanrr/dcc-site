@@ -1,13 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  Box,
-  Flex,
-  Heading,
-  HStack,
-  Image,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, HStack, Image, Text } from "@chakra-ui/react";
 
 export default function CarouselNews() {
   const arrowStyles = {
@@ -88,9 +80,9 @@ export default function CarouselNews() {
 
   return (
     <Flex
-      w="70%"
+      w="50%"
       h="50%"
-      pt={3}
+      // mt={-3}
       alignItems="flex-start"
       justifyContent="center"
       flexDirection="column"
